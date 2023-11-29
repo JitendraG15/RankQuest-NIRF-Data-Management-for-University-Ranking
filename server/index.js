@@ -1,10 +1,10 @@
 const express = require("express");
 const database = require("./config/database");
-const University = require("./models/University");
+// const University = require("./models/University");
 
 const app = express();
 require("dotenv").config();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 database.connect();
 
