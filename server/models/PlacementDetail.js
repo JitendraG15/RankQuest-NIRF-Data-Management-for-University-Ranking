@@ -4,24 +4,22 @@ const placementDetailSchema = new mongoose.Schema({
   studentID: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Student",
-    required: true,
+    // required: true,
   },
   employer: {
     type: String,
-    required: true,
+    // required: true,
   },
   jobTitle: {
     type: String,
-    required: true,
+    // required: true,
   },
   joiningDate: {
     type: Date,
-    required: true,
+    // required: true,
   },
   companyLocation: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Address",
-    required: true,
+    type: String
   },
   supervisor: {
     type: String,
@@ -34,7 +32,7 @@ const placementDetailSchema = new mongoose.Schema({
   },
   linkedInProfile: {
     type: String,
-    required: true,
+    // required: true,
   },
 });
 

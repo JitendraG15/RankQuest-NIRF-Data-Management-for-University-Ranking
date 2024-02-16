@@ -3,39 +3,39 @@ const mongoose = require("mongoose");
 const enrollmentDetailSchema = new mongoose.Schema({
   studentID: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
+    // required: true,
     ref: "Student",
   },
   enrollmentDate: {
     type: Date,
-    required: true,
+    // required: true,
   },
   enrollmentTerm: {
     type: Number,
-    required: true,
+    // required: true,
   },
   entranceTestName: {
     type: String,
   },
   entranceTestRegistrationNumber: {
     type: String,
-    required: true,
+    // required: true,
   },
   entranceTestRollNumber: {
     type: String,
-    required: true,
+    // required: true,
   },
   entranceTestTotalMarks: {
     type: Number,
-    required: true,
+    // required: true,
   },
   entranceTestObtainedMarks: {
     type: Number,
-    required: true,
+    // required: true,
   },
   qualification: {
     type: String,
-    required: true,
+    // required: true,
   },
   appliedProgrammes: [
     {

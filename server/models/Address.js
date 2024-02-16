@@ -3,31 +3,31 @@ const mongoose = require("mongoose");
 const addressSchema = new mongoose.Schema({
   entityID: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
+    // required: true,
   },
   houseNoOrStreetAddress: {
     typpe: String,
-    required: true,
+    // required: true,
   },
   city: {
     type: String,
-    required: true,
+    // required: true,
   },
   district: {
     type: String,
-    required: true,
+    // required: true,
   },
   state: {
     type: String,
-    required: true,
+    // required: true,
   },
   country: {
     type: String,
-    required: true,
+    // required: true,
   },
   postalCode: {
     type: Number,
-    required: true,
+    // required: true,
   },
 });
 

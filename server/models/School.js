@@ -15,7 +15,7 @@ const schoolSchema = new mongoose.Schema({
   },
   dean:{
     type:mongoose.Schema.Types.ObjectId,
-    required:true,
+    // required:true,
     ref:"TeachingFaculty"
   },
   departments:[{

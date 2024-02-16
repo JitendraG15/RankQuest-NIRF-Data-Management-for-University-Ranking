@@ -12,12 +12,12 @@ const departmentSchema = new mongoose.Schema({
    },
    hod:{
     type:mongoose.Schema.Types.ObjectId,
-    required:true,
+    // required:true,
     ref:"TeachingFaculty"
    },
    programs:[{
     type:mongoose.Schema.Types.ObjectId,
-    required:true,
+    // required:true,
     ref:"Program"
    }],
 
@@ -26,13 +26,13 @@ const departmentSchema = new mongoose.Schema({
    },
    facultyMembers:[{
     type:mongoose.Schema.Types.ObjectId,
-    required:true,
+    // required:true,
     ref:"TeachingFaculty"
    }],
    advisors:[
     {
         type:mongoose.Schema.Types.ObjectId,
-        required:true,
+        // required:true,
         ref:"TeachingFaculty"
     }
    ],
@@ -42,15 +42,12 @@ const departmentSchema = new mongoose.Schema({
    externalPartnerships:[{
     type:String
    }],
-   studentOrganizations:[{
-    type:mongoose.Schema.Types.ObjectId
-   }],
    facilities:[{
     type:String
    }],
    email:{
     type:String,
-    required:true
+    // required:true
    },
    phoneNumber:{
     type:Number

@@ -23,10 +23,7 @@ const universitySchema = new mongoose.Schema({
     accredition:{
         type:String,
     },
-    chancellor:{
-        type:String,
-        required:true
-    },
+   
     viceChancellor:{
         type:String,
         required:true
@@ -45,45 +42,35 @@ const universitySchema = new mongoose.Schema({
         required:true,
         ref:"Student"
     }],
-    teachingFaculties:[{
+    Faculties:[{
         type:mongoose.Schema.Types.ObjectId,
         required:true,
-        ref:"TeachingFaculty"
-    }],
-    nonTeachingFaculties:[{
-        type:mongoose.Schema.Types.ObjectId,
-        required:true,
-        ref:"NonTeachingFaculty"
+        ref:"Faculty"
     }],
     addesses:[{
         type:mongoose.Schema.Types.ObjectId,
         required:true,
     }],
     website:{
-        type:mongoose.Schema.Types.ObjectId
+        type:String
     },
     logo:{
         type:String
     },
     email:{
         type:String,
-        required:true
+        // required:true
     },
     phoneNumber:{
         type:Number,
-        required:true
+        // required:true
     },
     socialMediaLinks:[{
         type:String,
     }],
     languages:[{
         type:String,
-    }],
-    studentOrganizations:{
-        type:mongoose.Schema.Types.ObjectId,
-
-    }
-
+    }]
 
 })
 

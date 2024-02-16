@@ -4,32 +4,39 @@ const programSchema = new mongoose.Schema({
    departmentID:{
     type:mongoose.Schema.Types.ObjectId,
     ref:"Department",
-    required:true
+   //  required:true
    },
    programCode:{
     type:String,
-    required:true
+   //  required:true
    },
    programName:{
     type:String
    },
    programType:{
     type:String,
-    required:true,
-    enum:["UG","PG","Diploma"]
+   //  required:true,
+    enum:["UG","PG","Diploma", "Ph.D"],
+    default:"UG"
    },
    description:{
     type:String
    },
    duration:{
     type:Number,
-    required:true
+   //  required:true
 
    },
    seats:{
     type:Number,
-    required:true
+   //  required:true
    },
+   courses:[
+       {
+         type:mongoose.Schema.Types.ObjectId,
+         ref:"Course"
+       }
+   ],
    syllabus:{
     type:String
    },
@@ -38,11 +45,9 @@ const programSchema = new mongoose.Schema({
     ref:"Student"
    }],
    yearOffered:{
-    type:Number,
-    required:true
+    type:Date
+   //  required:true
    }
-
-
 });
 
 module.exports = mongoose.model("Program", programSchema);
